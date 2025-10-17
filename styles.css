@@ -99,6 +99,17 @@ li {
     font-weight: 600;
     font-size: 1.1rem;
     letter-spacing: 0.02em;
+    margin-top: 1rem;
+}
+
+.corona{
+    height: 50%;
+    width: 50%;
+    margin-top: 2rem;
+}
+.coronas{
+    margin-top: 2rem;
+    text-align: center;
 }
 
 .cacorros{
