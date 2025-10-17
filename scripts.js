@@ -5,20 +5,32 @@
     function qs(sel, ctx = document) { return ctx.querySelector(sel); }
     function qsa(sel, ctx = document) { return Array.from(ctx.querySelectorAll(sel)); }
 
-    // Obtener nombres de cócteles desde el DOM
-    function getCocktailsFromDOM() {
+    // Obtener nombres de bebidas desde el DOM (cocteles + footer coronas + lista sin licor)
+    function getDrinksFromDOM() {
+        const names = new Set();
+        // main sections (cocteles)
         const sections = qsa('main.cocteles > section');
-        return sections.map(s => {
+        sections.forEach(s => {
             const nameEl = s.querySelector('p');
-            return nameEl ? nameEl.textContent.trim() : null;
-        }).filter(Boolean);
+            if (nameEl && nameEl.textContent.trim()) names.add(nameEl.textContent.trim());
+        });
+        // footer coronas (p elements inside .coronas)
+        const coronaPs = qsa('footer .coronas p');
+        coronaPs.forEach(p => { if (p.textContent.trim()) names.add(p.textContent.trim()); });
+        // footer lists (li items)
+        const footerLis = qsa('footer ul li');
+        footerLis.forEach(li => { if (li.textContent.trim()) names.add(li.textContent.trim()); });
+
+        return Array.from(names);
     }
 
     // Poblar select
     function populateSelect() {
         const select = qs('#cocktail-select');
-        const cocktails = getCocktailsFromDOM();
-        cocktails.forEach(c => {
+        // limpiar opciones excepto la primera
+        select.querySelectorAll('option:not([value=""])').forEach(o => o.remove());
+        const drinks = getDrinksFromDOM();
+        drinks.forEach(c => {
             const opt = document.createElement('option');
             opt.value = c;
             opt.textContent = c;

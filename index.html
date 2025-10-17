@@ -67,23 +67,6 @@
             <span>Ron blanco, limon, blue curacao, sprite</span>
         </section>
     </main>
-    <!-- Formulario de pedido -->
-    <section id="order-section" class="order-section">
-        <h2>Realizar pedido</h2>
-        <form id="order-form">
-            <label for="customer-name">Nombre:</label>
-            <input type="text" id="customer-name" name="customer-name" placeholder="Tu nombre" required>
-
-            <label for="cocktail-select">Selecciona un cóctel:</label>
-            <select id="cocktail-select" name="cocktail-select" required>
-                <option value="">-- Elige un cóctel --</option>
-            </select>
-
-            <button type="submit">Enviar pedido</button>
-        </form>
-        <div id="order-msg" aria-live="polite"></div>
-    </section>
-
     <!-- Panel Superadmin (oculto) -->
     <aside id="admin-panel" class="admin-panel" aria-hidden="true">
         <div class="admin-header">
@@ -115,6 +98,22 @@
         </ul>
     </footer>
     <script src="scripts.js"></script>
+    <!-- Formulario de pedido (moved to bottom) -->
+    <section id="order-section" class="order-section">
+        <h2>Realizar pedido</h2>
+        <form id="order-form">
+            <label for="customer-name">Nombre:</label>
+            <input type="text" id="customer-name" name="customer-name" placeholder="Tu nombre" required>
+
+            <label for="cocktail-select">Selecciona una bebida:</label>
+            <select id="cocktail-select" name="cocktail-select" required>
+                <option value="">-- Elige una bebida --</option>
+            </select>
+
+            <button type="submit">Enviar pedido</button>
+        </form>
+        <div id="order-msg" aria-live="polite"></div>
+    </section>
 </body>
 
 </html>
