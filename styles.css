@@ -121,3 +121,73 @@ li {
     --font-name: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-body: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+
+/* Estilos para el formulario de pedidos y panel admin */
+.order-section {
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 1rem 1.25rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    text-align: left;
+}
+.order-section h2 {
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+.order-section label {
+    display: block;
+    margin-top: 0.6rem;
+    font-weight: 600;
+    color: #2E5F4F;
+}
+.order-section input[type="text"],
+.order-section select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.order-section button[type="submit"] {
+    display: block;
+    margin: 0.9rem 0 0 0;
+    padding: 0.6rem 1rem;
+    background: #2E5F4F;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.admin-panel {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 360px;
+    max-height: 80vh;
+    overflow: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    padding: 1rem;
+    display: none;
+    z-index: 9999;
+}
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+.admin-controls button {
+    margin-left: 0.5rem;
+}
+.order-item {
+    border-bottom: 1px solid #eee;
+    padding: 0.6rem 0;
+}
+.order-item small {
+    display: block;
+    color: #666;
+}

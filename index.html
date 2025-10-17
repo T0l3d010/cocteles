@@ -14,6 +14,7 @@
 <body>
     <header class="cabecera">
         <h1>Cocktails</h1>
+        <button id="admin-btn" title="Ver pedidos (superadmin)" style="margin-top:10px;">Superadmin</button>
     </header>
     <main class="cocteles">
         <section class="mojito">
@@ -66,6 +67,34 @@
             <span>Ron blanco, limon, blue curacao, sprite</span>
         </section>
     </main>
+    <!-- Formulario de pedido -->
+    <section id="order-section" class="order-section">
+        <h2>Realizar pedido</h2>
+        <form id="order-form">
+            <label for="customer-name">Nombre:</label>
+            <input type="text" id="customer-name" name="customer-name" placeholder="Tu nombre" required>
+
+            <label for="cocktail-select">Selecciona un cóctel:</label>
+            <select id="cocktail-select" name="cocktail-select" required>
+                <option value="">-- Elige un cóctel --</option>
+            </select>
+
+            <button type="submit">Enviar pedido</button>
+        </form>
+        <div id="order-msg" aria-live="polite"></div>
+    </section>
+
+    <!-- Panel Superadmin (oculto) -->
+    <aside id="admin-panel" class="admin-panel" aria-hidden="true">
+        <div class="admin-header">
+            <h2>Pedidos realizados</h2>
+            <div class="admin-controls">
+                <button id="admin-close">Cerrar</button>
+                <button id="clear-orders">Borrar todos</button>
+            </div>
+        </div>
+        <div id="orders-list"></div>
+    </aside>
     <footer class="cervezas">
         <h2>Bebidas</h2>
         <ul class="coronas">            
@@ -85,7 +114,7 @@
             <li>Piña colada</li>
         </ul>
     </footer>
-
+    <script src="scripts.js"></script>
 </body>
 
 </html>
