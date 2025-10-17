@@ -81,7 +81,8 @@ span {
     margin: 0 0 0.6rem 0;
     line-height: 1.45;
 }
-h2{
+
+h2 {
     font-family: var(--font-name);
     font-weight: 600;
     font-size: 1.5rem;
@@ -91,7 +92,7 @@ h2{
 }
 
 footer {
-    margin: 3rem;   
+    margin: 3rem;
 }
 
 li {
@@ -102,17 +103,18 @@ li {
     margin-top: 1rem;
 }
 
-.corona{
+.corona {
     height: 50%;
     width: 50%;
     margin-top: 2rem;
 }
-.coronas{
+
+.coronas {
     margin-top: 2rem;
     text-align: center;
 }
 
-.cacorros{
+.cacorros {
     margin-top: 3rem;
 }
 
@@ -129,19 +131,22 @@ li {
     padding: 1rem 1.25rem;
     background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     text-align: left;
 }
+
 .order-section h2 {
     text-align: center;
     margin-bottom: 0.75rem;
 }
+
 .order-section label {
     display: block;
     margin-top: 0.6rem;
     font-weight: 600;
     color: #2E5F4F;
 }
+
 .order-section input[type="text"],
 .order-section select {
     width: 100%;
@@ -150,6 +155,7 @@ li {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
 .order-section button[type="submit"] {
     display: block;
     margin: 0.9rem 0 0 0;
@@ -160,6 +166,18 @@ li {
     border-radius: 6px;
     cursor: pointer;
 }
+
+#admin-btn {
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#admin-btn:hover {
+    background-color: #2E5F4F;
+    color: #cce5ff;
+}
+
 .admin-panel {
     position: fixed;
     right: 20px;
@@ -169,25 +187,41 @@ li {
     overflow: auto;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     padding: 1rem;
     display: none;
     z-index: 9999;
 }
+
 .admin-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
 }
+
 .admin-controls button {
     margin-left: 0.5rem;
 }
+
 .order-item {
     border-bottom: 1px solid #eee;
     padding: 0.6rem 0;
 }
+
 .order-item small {
     display: block;
     color: #666;
+}
+
+#admin-close {
+    border-radius: 5px;
+    padding: 0.3rem;
+}
+
+
+
+#clear-orders {
+    border-radius: 5px;
+    padding: 0.3rem;
 }
